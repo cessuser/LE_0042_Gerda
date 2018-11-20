@@ -1,0 +1,36 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load otree static otree_tools %}
+
+{% block title %}
+    Section 2 of Part 1
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        Now please choose which painting you prefer by clicking on either A or B.
+    </p>
+    <table class="table">
+        <tr>
+           <th>Painting A</th>
+           <th>Painting B</th>
+        </tr>
+        <tr>
+            <td><img src= "{% static pics_srcA %}" height="400"></td>
+            <td><img src="{% static pics_srcB %}" height="400"></td>
+        </tr>
+    </table>
+
+    {% tracking_time %}
+    {% tracking_focus %}
+    <table class="table">
+        <tr align="center">
+                {% for choice in form.pt2_pair4 %}
+                    <th valign="middle">   {{ choice }}   </th>
+                {% endfor %}
+        </tr>
+    </table>
+
+    <div class="next-btn" style="text-align:right;">{% next_button %}</div>
+{% endblock %}

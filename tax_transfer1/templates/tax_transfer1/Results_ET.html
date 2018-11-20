@@ -1,0 +1,21 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Result of Earnings Task 1
+{% endblock %}
+
+{% block content %}
+    <p>
+         Based on your ranking within your group, you will have earnings of {{ player.income1 }} tokens in Period 1.
+    </p>
+
+    <p>
+         On the next screen, the Tax and Transfer Game will start. In each round of this game, you will be randomly
+         matched in a decision group and you will be asked to choose a tax and transfer scheme for your decision group.
+    </p>
+
+<div align="right">{% next_button %}</div>
+{% endblock %}
+
+

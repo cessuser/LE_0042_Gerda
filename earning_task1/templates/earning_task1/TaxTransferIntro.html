@@ -1,0 +1,60 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Earnings and Competition
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        After the Earnings Task, you will be randomly matched with three other participants in each round to form
+        <i> a decision group</i>. Everyone, including you, will see the group membership and the earnings of each participant
+        in the decision group.
+
+    </p>
+    <p>
+        The decision group consists of participants with 800, 600, 400, and 200 tokens.
+
+    </p>
+    <p>
+        All participants start the round with their earnings, <i> except for the participant with 400 tokens.</i>
+        The earnings of this participant also depend on a competition between them and the participant with 200 tokens.
+        More specifically, this competition entails a comparison of the raw points that each of them collected in the
+        Earnings Task.
+    </p>
+    <p>
+        If the difference between the number of raw points earned by the participant with 400 tokens and those earned
+        by the participant with 200 tokens is large, the participant with 400 tokens wins the competition. This means
+        that they will keep their earnings.
+    </p>
+    <p>
+        However, if the difference is small, the participant with 400 tokens loses the competition. This means that this
+        participant will lose 40 tokens of their earnings.
+
+    </p>
+
+    <p>
+    <b>   Are there questions about this screen or anything we have reviewed so far? </b>
+    </p>
+
+    <style>
+    .otree-next-button {
+        display: none;
+    }
+    </style>
+
+    <head>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#proceed').hide().delay(6*1000).fadeIn(2200);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+
+
+{% endblock %}

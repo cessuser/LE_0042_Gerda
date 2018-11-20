@@ -1,0 +1,27 @@
+{% extends "global/Base.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+<p>
+    You are asked to complete several survey questions. Some of these questions are demographic (e.g. age, degree,
+    and gender), while other questions are about your political attitudes or your strategy in this experiment. Your
+    answers will not be matched with your name, and they will be kept anonymous.
+</p>
+<p>
+    Please answer all questions and press the button marked "Next" at the bottom of the screen to complete the experiment.
+</p>
+<p>
+    You will receive 200 tokens to compensate for the time needed to complete the survey.
+    After everyone has completed the survey, the experimenter will pay you, one by one, your earnings from the experiment
+    and the participation fee. You will be asked to sign a receipt verifying that you received payment.
+    Thank you for participating in this experiment!
+</p>
+
+    {% next_button %}
+{% endblock %}
+
+

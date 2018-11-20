@@ -1,0 +1,68 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Tax and Transfer Game
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        After the outcome of the competition is revealed, you and the other participants will be asked to choose between
+        two tax and transfer schemes for the decision group. In one scheme, everyone pays 20% of taxes over their
+        earnings and each participant receives 100 tokens as a transfer. In another scheme, each participant pays 40% of
+        taxes over their earnings and each receives 200 tokens.
+
+    </p>
+    <p>
+       If the participant with 400 tokens lost the competition, this participant will lose 40 tokens of their earnings
+        <i>before taxes</i>.
+
+    </p>
+    <p>
+        The net income of each participant is, therefore, calculated as follows:
+    </p>
+    <p>
+        <b> earnings - loss from competition (if applicable) - tax payment + transfers </b>
+
+    </p>
+    <p>
+       Each participant will choose in private which scheme they want to apply to the group. The computer will then
+        randomly select one of these decisions and apply it to all participants in the decision group. Each decision
+        is equally likely to be drawn.
+    </p>
+    <p>
+        Two rounds per period will be randomly selected by the computer for computing payoffs. Each round is equally
+        likely to be drawn, and your decisions and outcomes in one round will not affect your outcomes in any other round.
+    </p>
+    <p>
+        You will find out your payoff from Part 2 at the end of the experiment.
+    </p>
+    <p>
+    <b>   Are there questions about this screen or anything we have reviewed so far? </b>
+    </p>
+
+    <p>
+        On the next screen, you will start the First Earnings Task.
+    </p>
+
+    <style>
+    .otree-next-button {
+        display: none;
+    }
+    </style>
+
+    <head>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#proceed').hide().delay(6*1000).fadeIn(2200);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+
+
+{% endblock %}

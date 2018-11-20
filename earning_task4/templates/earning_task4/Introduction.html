@@ -1,0 +1,52 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Part 3
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        For the final part of today’s experiment, you are asked to complete three short tasks.
+    </p>
+    <p>
+        First, you will complete the Earnings Task from before. However, this time you will play <b>against the clock</b>.
+        Your earned points will be directly converted into tokens. The number of tokens you earn thus depends solely
+        on your own performance. The task will be the same for everyone.
+    </p>
+    <p>
+        Secondly, you will be asked to decide on a bonus for a randomly matched participant in the lab. The level of
+        this bonus will be 200 tokens or 600 tokens. The computer will randomly select one participant from the lab
+        session to receive the bonus that was chosen by their match. They will not know who chose the level of their
+        bonus. The lottery outcome is revealed at the end of the experiment.
+    </p>
+    <p>
+        Finally, you will be asked to complete a several survey questions.
+        After the survey, you will find out your total payoff from the experiment.
+    </p>
+
+    <p>
+        The Earnings Task will start on the next screen.
+    </p>
+
+    <style>
+    .otree-next-button {
+        display: none;
+    }
+    </style>
+
+    <head>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#proceed').hide().delay(3*1000).fadeIn(2200);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+
+
+{% endblock %}

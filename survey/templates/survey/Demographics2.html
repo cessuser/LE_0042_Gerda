@@ -1,0 +1,24 @@
+{% extends "global/Base.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+
+
+    {% formfield player.q7 %}
+    {% formfield player.q8 %}
+    <p>
+    To what extent do you agree or disagree with the following statements:
+    </p>
+    {% formfield player.q9 %}
+    {% formfield player.q10 %}
+    {% formfield player.q11 %}
+    {% formfield player.q12 %}
+    {% formfield player.q13 %}
+
+    {% next_button %}
+
+{% endblock %}

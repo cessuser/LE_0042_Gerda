@@ -1,0 +1,20 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Result of Earnings Task 2
+{% endblock %}
+
+{% block content %}
+    <p>
+        Based on your ranking within your group, you will have earnings of {{ player.income2 }} tokens in Period 2.
+    </p>
+    <p>
+        On the next screen, the Tax and Transfer Game will start.
+    </p>
+
+
+<div align="right">{% next_button %}</div>
+{% endblock %}
+
+

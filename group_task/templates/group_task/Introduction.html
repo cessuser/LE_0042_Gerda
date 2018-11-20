@@ -1,0 +1,32 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Section 3 of Part 1
+{% endblock %}
+
+
+{% block content %}
+
+    <p>
+        You will now see two more paintings in the Group Task. Please select the artist who you think made each painting.
+    </p>
+    <p>
+        You and your group members will be rewarded 100 tokens if more than half of your group correctly identifies the
+        artist of each painting.
+    </p>
+    <p>
+        You and your group members will earn an additional 100 tokens if your group gave the most
+        correct answers.
+    </p>
+    <p>
+        You will find out your payoff from Part 1 at the end of the experiment.
+    </p>
+
+
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+
+
+{% endblock %}

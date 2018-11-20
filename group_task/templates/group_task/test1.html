@@ -1,0 +1,23 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load otree static otree_tools %}
+
+{% block title %}
+    Section 3 of Part 1
+{% endblock %}
+
+
+{% block content %}
+
+
+     <table class="table">
+        <tr>
+            <td><img src="{% static "group_task/test_1.jpg" %}" height="400"></td>
+        </tr>
+    </table>
+
+    {% formfield player.gt1_choice with label="Who is the artist of this painting?" %}
+
+    <div class="next-btn" style="text-align:right;">{% next_button %}</div>
+
+{% endblock %}

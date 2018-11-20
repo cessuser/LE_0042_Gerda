@@ -1,0 +1,66 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Earnings Task
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        In each period, you will be asked to perform an Earnings Task. This task consists of correctly counting the number
+        of digits displayed on your screen <b> within 60 seconds</b>. For each correct answer, you receive 10 raw points.
+        Once you provide the correct answer, you can move on to the next question. If you give three incorrect answers in
+        a row, you will have 10 raw points deducted from your total number of raw points. This deduction is intended to
+        prevent you from guessing.
+
+    </p>
+    <p>
+        Once the time has lapsed, all participants will be ranked <b>within their group</b> based on their performance
+        in the Earnings Task. This means that there will be a ranking for all participants from the Klee-Bazille group,
+        a ranking for all participants from the Klee-Boch group, and a ranking for all participants from the Kandinsky-Boch group.
+
+    </p>
+
+    <p>
+        Each participant will then receive the following earnings in each round based on the ranking within their group:
+    </p>
+    <ul>
+        <li>Participants in the top 25% receive 800 tokens;</li>
+        <li>Participants in the next 25% receive 600 tokens;</li>
+        <li>Participants in the second-to-last 25% receive 400 tokens;</li>
+        <li>Participants in the bottom 25% receive 200 tokens.</li>
+    </ul>
+
+    <p>
+        You will be informed of the number of tokens you will receive in this period.
+    </p>
+    <p>
+        This task is repeated in the subsequent periods. The only difference is that the difficulty of the task will
+        be adjusted based on your previous performance. If you performed well, the questions will become more difficult.
+
+    </p>
+    <p>
+    <b>   Are there questions about this screen or anything we have reviewed so far? </b>
+    </p>
+
+    <style>
+    .otree-next-button {
+        display: none;
+    }
+    </style>
+
+    <head>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#proceed').hide().delay(6*1000).fadeIn(2200);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+
+
+{% endblock %}

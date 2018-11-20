@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block content %}
+ <p id="identity">&nbsp;&nbsp;Round {{ round_num }} of Period 3 :&nbsp;&nbsp;&nbsp;You are a {{ group }} with {{ income }} tokens.</p>
+
+
+    <p>In this round, you are matched with the following participants:</p>
+    <ul>
+        <li> {{ member1_group }} with {{ member1_tokens }} tokens</li>
+        <li> {{ member2_group }} with {{ member2_tokens }} tokens</li>
+        <li> {{ member3_group }} with {{ member3_tokens }} tokens</li>
+    </ul>
+    <p>
+       {{ competition_msg }}
+    </p>
+    {% formfield player.dv with label="Which tax and transfer scheme do you prefer?" %}
+    {% next_button %}
+
+<style>
+    #identity{
+        background-color: Gainsboro ;
+        font-size: 20px;
+        text-align:center;
+
+    }
+</style>
+{% endblock %}

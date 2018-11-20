@@ -1,0 +1,28 @@
+{% extends "global/Base.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+    {% formfield player.q18 %}
+<p>
+    On a scale from 1 (Not at all) to 7 (Very much), please rate how close did you feel to members of the _______
+</p>
+    {% formfield player.q19 %}
+    {% formfield player.q20 %}
+    {% formfield player.q21 %}
+    {% formfield player.q22 %}
+<p>
+    On a scale from 1 to 10, please rate how familiar you were before the experiment with the paintings made by ______
+</p>
+    {% formfield player.q23 %}
+    {% formfield player.q24 %}
+    {% formfield player.q25 %}
+    {% formfield player.q26 %}
+    {% formfield player.q27 %}
+
+{% next_button %}
+
+{% endblock %}

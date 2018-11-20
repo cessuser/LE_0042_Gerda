@@ -1,0 +1,14 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+
+{% block content %}
+
+    <table class="table">
+            <tr align="center">{{ shown_num }}</tr>
+            <tr>{% formfield player.entry_field with label="How many digits are shown?" %}</tr>
+    </table>
+
+    {% next_button %}
+
+{% endblock %}

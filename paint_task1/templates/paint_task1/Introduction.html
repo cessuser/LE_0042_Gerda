@@ -1,0 +1,56 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Part 1
+{% endblock %}
+
+
+{% block content %}
+
+
+    <p>
+        In Part 1 of the experiment, you will be asked to complete three tasks.
+    </p>
+    <p>
+        Firstly, you will be shown five pairs of paintings by two artists. You will then be asked to choose which
+        painting in each pair you prefer.
+    </p>
+    <p>
+        In the second task, everyone will again be shown five pairs of paintings, but these paintings are from <b> two other
+        artists</b>. You will again be asked to choose which painting in each pair you prefer.
+
+    </p>
+    <p>
+       You will then be assigned to one of three groups based on the artists you preferred in both tasks. These groups
+        will be the same for the remainder of the experiment.
+
+    </p>
+    <p>
+        Finally, you will complete a task with the members of your group. Depending on your group’s performance, you
+        can earn up to 200 tokens in this task.
+    </p>
+    <p>
+        After Part 1 has finished, we will give you the instructions for the next part of the experiment.
+    </p>
+
+    <style>
+    .otree-next-button {
+        display: none;
+    }
+    </style>
+
+    <head>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#proceed').hide().delay(4*1000).fadeIn(2200);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+
+
+{% endblock %}

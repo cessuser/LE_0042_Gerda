@@ -1,0 +1,21 @@
+{% extends "global/Base.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+<p>
+    The table below shows the earnings distribution of a group with four members and two tax and transfer schemes
+    they can choose between. Suppose that participant 2 has won the competition and will start the round with earnings of 400 tokens.
+</p>
+<p><img src= "{% static "survey/table.jpg" %}" height="300"></p>
+{% formfield player.q14 %}
+{% formfield player.q15 %}
+{% formfield player.q16 %}
+{% formfield player.q17 %}
+
+{% next_button %}
+
+{% endblock %}

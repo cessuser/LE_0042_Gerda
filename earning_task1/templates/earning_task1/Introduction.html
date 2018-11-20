@@ -1,0 +1,47 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Part 2
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        In Part 2 of the experiment, you will be asked to make a series of decisions in three periods.
+    </p>
+    <p>
+        At the start of each period, you will be asked to perform a task to determine your earnings for the rest of
+        that period.
+    </p>
+    <p>
+        You will then be randomly matched with three other participants in each round. Together you will form <b>a
+        decision group</b>. You and the other three participants will be asked to choose a tax and transfer scheme for your
+        decision group. From these choices, the computer will randomly select two and apply it to all participants in
+        the decision group.
+    </p>
+    <p>
+        The next section goes through these procedures in more detail.
+    </p>
+
+
+    <style>
+    .otree-next-button {
+        display: none;
+    }
+    </style>
+
+    <head>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#proceed').hide().delay(4*1000).fadeIn(2200);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+
+
+{% endblock %}

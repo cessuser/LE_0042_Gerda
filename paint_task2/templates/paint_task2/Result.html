@@ -1,0 +1,26 @@
+{% extends "global/Base.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+    <p>
+        You could choose between paintings by Klee and Kandinsky in the first task and between paintings by Boch and
+        Bazille in the second task.
+    </p>
+
+    <p>
+        Based on your choices in both painting tasks, you are assigned to the <b> {{ group }} group</b>.
+        Your group has {{ n_group }} members.
+    </p>
+
+    <p>
+        These groups will remain the same for the rest of the experiment.
+    </p>
+
+    <div align="right">{% next_button %}</div>
+{% endblock %}
+
+

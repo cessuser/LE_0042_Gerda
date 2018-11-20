@@ -1,0 +1,61 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        <b> WELCOME! </b>
+    </p>
+
+    <p>
+        Please read the following instructions carefully.
+    </p>
+
+    <p>
+        This is an experiment in decision-making. The amount of money you earn will depend upon
+        the decisions you make, and on the decisions other participants make. Your earnings are given
+        in tokens. This experiment has three parts. Your total earnings will be the sum of your payoffs in
+        each part. At the end of the experiment you will be paid <b> IN CASH </b> based on the following exchange rate:
+
+    </p>
+
+    <p>
+    <b> £1 = 400 tokens </b>
+    </p>
+
+    <p>
+        In addition, you will be paid <b> £5 </b> for participation. Everyone will be paid in private and you are
+        under no obligation to tell others how much you have earned.
+    </p>
+
+    <p>
+        Please do not talk or communicate with other participants during the experiment or look at other
+        participants’ computer screens. Please turn off your mobile phones to avoid any distractions.
+        If you have a question, feel free to raise your hand, and an experimenter will come to help you.
+
+    </p>
+
+    <style>
+    .otree-next-button {
+        display: none;
+    }
+    </style>
+
+    <head>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#proceed').hide().delay(2*1000).fadeIn(2200);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="next-btn" id="proceed" style="text-align:right;">{% next_button %}</div>
+    </body>
+{% endblock %}
+
+
